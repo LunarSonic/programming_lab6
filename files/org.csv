@@ -1,0 +1,15 @@
+id,name,coordinates.x,coordinates.y,creationDate,annualTurnover,type,postalAddress
+1,Avito,183.55,193,2025-03-21T13:05:20.876999+03:00[Europe/Moscow],1000000,PUBLIC,Kamenoostrovsky Avenue
+2,Oracle,98.123,192,2025-02-17T15:32:37.618098+03:00[Europe/Moscow],1938737,PUBLIC,Kiyevskoe Shosse
+3,Microsoft,103.14,124,2025-02-17T15:36:51.096911+03:00[Europe/Moscow],10000,null,Notheast 36th
+4,Samsung,192.0,13,2025-02-17T15:56:11.357826+03:00[Europe/Moscow],10290,OPEN_JOINT_STOCK_COMPANY,Bolshaya Pushkarskaya Street
+5,Yandex,12.173,184,2025-02-17T17:15:57.027652+03:00[Europe/Moscow],94000,COMMERCIAL,Piskaryovskiy Avenue
+6,Alfa Bank,98.0,182,2025-02-17T18:03:23.826231+03:00[Europe/Moscow],100065,PUBLIC,Bolshoy Avenue
+7,Ozon,865.0,1783,2025-02-17T18:04:19.415671+03:00[Europe/Moscow],190,COMMERCIAL,Pestelya Street
+8,Teremok,132.0,109,2025-02-17T18:30:35.219339+03:00[Europe/Moscow],8392,TRUST,Kronverskiy Avenue
+9,Tesla,200.5,300,2025-02-17T18:42:58.770337+03:00[Europe/Moscow],2000,PUBLIC,Prime Lane
+10,Intel,125.4,90,2025-02-17T18:43:47.173553+03:00[Europe/Moscow],30000,PUBLIC,Silicon Valley
+11,Amazon,500.467,200,2025-02-17T18:44:30.062929+03:00[Europe/Moscow],1000,TRUST,7th Avenue
+12,ReStore,90.0,19,2025-02-28T12:58:25.567931+03:00[Europe/Moscow],10000,COMMERCIAL,Bolshoy Avenue
+13,Avito,13.0,192,2025-03-20T13:47:21.916652+03:00[Europe/Moscow],1000,null,Bolshaya Pushkarskaya Street
+14,McDonald's,107.24,23,2025-03-21T13:05:20.856234+03:00[Europe/Moscow],10,TRUST,Polustrovskiy Avenue

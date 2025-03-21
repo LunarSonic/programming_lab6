@@ -1,0 +1,6 @@
+show
+info
+help
+history
+proga
+exit

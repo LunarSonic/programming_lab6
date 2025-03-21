@@ -1,0 +1,1 @@
+execute_script programming_lab6/files/recursive1.txt
