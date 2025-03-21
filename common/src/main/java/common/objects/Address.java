@@ -3,6 +3,9 @@ import common.utility.Validatable;
 import java.io.Serial;
 import java.io.Serializable;
 
+/**
+ * Класс адреса
+ */
 public class Address implements Validatable, Serializable {
     @Serial
     private static final long serialVersionUID = 10L;

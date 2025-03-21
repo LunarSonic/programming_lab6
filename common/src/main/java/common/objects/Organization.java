@@ -6,7 +6,9 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
-
+/**
+ * Главный класс организации
+ */
 public class Organization extends Model {
     @Serial
     private static final long serialVersionUID = 12L;

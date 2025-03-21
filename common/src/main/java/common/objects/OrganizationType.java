@@ -2,12 +2,14 @@ package common.objects;
 import java.io.Serial;
 import java.io.Serializable;
 
+/**
+ * Enum из типов организации
+ */
 public enum OrganizationType implements Serializable {
     COMMERCIAL,
     PUBLIC,
     TRUST,
     OPEN_JOINT_STOCK_COMPANY;
-
     @Serial
     private static final long serialVersionUID = 13L;
 

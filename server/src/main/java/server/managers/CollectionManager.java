@@ -21,7 +21,7 @@ public class CollectionManager implements Serializable {
     private ZonedDateTime lastInitTime; //Время последней инициализации менеджера
     private ZonedDateTime lastSaveTime; //Время последнего сохранения коллекции
     private final FileManager fileManager;
-    private static CollectionManager instance;
+    private static CollectionManager instance = null;
 
     public static CollectionManager getCollectionManagerInstance() {
         if (instance == null) {

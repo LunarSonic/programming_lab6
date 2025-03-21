@@ -3,6 +3,9 @@ import common.utility.Validatable;
 import java.io.Serial;
 import java.io.Serializable;
 
+/**
+ * Класс координат
+ */
 public class Coordinates implements Validatable, Serializable {
     @Serial
     private static final long serialVersionUID = 11L;

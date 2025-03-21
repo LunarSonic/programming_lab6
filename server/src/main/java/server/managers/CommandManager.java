@@ -18,7 +18,7 @@ public class CommandManager implements Serializable {
     private static final int COMMAND_HISTORY_SIZE = 15;
     protected Queue<String> commandHistory = new ArrayDeque<>();
     private final Map<String, Command> commands; //Словарь, который необходим для хранения команд и их названий
-    private static CommandManager instance;
+    private static CommandManager instance = null;
 
     /**
      * Конструктор менеджера команд
