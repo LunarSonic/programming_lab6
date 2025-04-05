@@ -1,5 +1,6 @@
 package client.utility;
 import client.network.NetworkClient;
+import client.network.RequestCreator;
 import common.commands.CommandName;
 import common.network.Request;
 import common.utility.ExecutionResponse;

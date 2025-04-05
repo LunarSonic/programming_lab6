@@ -1,4 +1,4 @@
-package client.utility;
+package client.network;
 import common.commands.CommandName;
 import common.objects.Organization;
 import common.forms.OrganizationForm;

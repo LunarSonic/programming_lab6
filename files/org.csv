@@ -1,5 +1,5 @@
 id,name,coordinates.x,coordinates.y,creationDate,annualTurnover,type,postalAddress
-1,Avito,183.55,193,2025-03-21T13:05:20.876999+03:00[Europe/Moscow],1000000,PUBLIC,Kamenoostrovsky Avenue
+1,Wildberries,12.0,19,2025-04-05T17:35:31.586+03:00[Europe/Moscow],1000,PUBLIC,Bolshaya Polyanka
 2,Oracle,98.123,192,2025-02-17T15:32:37.618098+03:00[Europe/Moscow],1938737,PUBLIC,Kiyevskoe Shosse
 3,Microsoft,103.14,124,2025-02-17T15:36:51.096911+03:00[Europe/Moscow],10000,null,Notheast 36th
 4,Samsung,192.0,13,2025-02-17T15:56:11.357826+03:00[Europe/Moscow],10290,OPEN_JOINT_STOCK_COMPANY,Bolshaya Pushkarskaya Street
