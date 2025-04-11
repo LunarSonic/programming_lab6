@@ -36,7 +36,7 @@ public class NetworkClient {
             SocketAddress address = new InetSocketAddress(host, port);
             channel = SocketChannel.open();
             channel.connect(address);
-            console.println("Соединение с сервером установлено!");
+            console.println("Соединение с сервером установлено");
         } catch (ConnectException e) {
             console.println("Сервер недоступен, пвторите попытку позже");
             System.exit(1);

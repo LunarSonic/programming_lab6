@@ -21,7 +21,7 @@ public class NetworkServer {
     private Selector selector;
     private final CommandManager commandManager;
     private final AppLogger logger = new AppLogger(NetworkServer.class);
-    private final ResponseCreator responseCreator;
+    private final RequestParser requestParser;
     private final CollectionManager collectionManager;
 
     /**
@@ -31,7 +31,7 @@ public class NetworkServer {
     public NetworkServer(InetSocketAddress address) {
         this.address = address;
         this.commandManager = CommandManager.getCommandManagerInstance();
-        this.responseCreator = ResponseCreator.getResponseCreatorInstance();
+        this.requestParser = RequestParser.getRequestParserInstance();
         this.collectionManager = CollectionManager.getCollectionManagerInstance();
     }
 
@@ -79,7 +79,6 @@ public class NetworkServer {
                 }
             }
         }).start();
-
         try {
             while (true) {
                 selector.select(); //блокируем выполнение до появления доступных каналов
@@ -126,7 +125,6 @@ public class NetworkServer {
             logger.info("Клиент отключился");
             client.close();
             key.cancel(); //отмена регистрации канала
-            return;
         }
         buffer.flip();
         byte[] data = new byte[buffer.remaining()];
@@ -136,22 +134,19 @@ public class NetworkServer {
         Request receivedRequest = Serializer.getInstance().deserialize(data, Request.class);
         if (receivedRequest == null) {
             logger.error("Сервер получил некорректные данные!");
-            return;
         }
         String requestFromClient = receivedRequest.getCommandName().toString() + " " + (receivedRequest.getCommandArgs() != null ? receivedRequest.getCommandArgs() : "");
         if (receivedRequest.getCommandObjectArg() != null) {
             requestFromClient += " " + receivedRequest.getCommandObjectArg().toString();
         }
-
         logger.info("Получен запрос: " + requestFromClient);
         var command = commandManager.getCommands().get(receivedRequest.getCommandName().toString());
         if (command == null) {
             sendResponse(client, new ExecutionResponse("Команда не найдена: " + receivedRequest.getCommandName()));
-            return;
         }
 
         //парсим аргументы команды
-        String[] commandAndArgs = responseCreator.parseCommand(receivedRequest);
+        String[] commandAndArgs = requestParser.parseCommand(receivedRequest);
         ExecutionResponse response = command.execute(commandAndArgs);
         sendResponse(client, response);
         commandManager.addCommandToHistory(receivedRequest.getCommandName().getName());

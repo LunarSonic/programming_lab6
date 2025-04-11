@@ -3,14 +3,14 @@ import common.commands.CommandName;
 import common.network.Request;
 
 /**
- * Класс для создания ответа от сервера
+ * Класс для парсинга запроса, полученного от клиента
  */
-public class ResponseCreator {
-    private static ResponseCreator instance = null;
+public class RequestParser {
+    private static RequestParser instance = null;
 
-    public static ResponseCreator getResponseCreatorInstance() {
+    public static RequestParser getRequestParserInstance() {
         if (instance == null) {
-            instance = new ResponseCreator();
+            instance = new RequestParser();
         }
         return instance;
     }
