@@ -16,7 +16,7 @@ public class HistoryCommand extends Command {
      */
     public HistoryCommand(CommandManager commandManager) {
         super(CommandName.history.name(), "вывести последние 15 команд (без их аргументов)");
-        this.commandManager = CommandManager.getCommandManagerInstance();
+        this.commandManager = commandManager;
     }
 
     /**

@@ -47,8 +47,8 @@ public class OrganizationForm extends BasicFormation<Organization> {
     private String askName() throws FormBreak {
         String name;
         while (true) {
-            console.println("Введите название организации: ");
             try {
+                console.println("Введите название организации: ");
                 name = console.readInput().trim();
                 if (name.equals("exit")) throw new FormBreak();
 
