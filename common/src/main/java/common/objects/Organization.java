@@ -1,6 +1,5 @@
 package common.objects;
 import common.utility.Model;
-
 import java.io.Serial;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -128,6 +127,6 @@ public class Organization extends Model {
                 "Дата создания: " + getCreationDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy H:mm:ss")) + "\n" +
                 "Годовой оборот: " + getAnnualTurnover() + "\n" +
                 "Тип организации: " + (getType() != null ? getType() : "не указан") + "\n" +
-                "Адрес: " + (getPostalAddress() != null ? getPostalAddress().getStreet() : "не указан") + "\n";
+                "Адрес: " + getPostalAddress().getStreet();
     }
 }
